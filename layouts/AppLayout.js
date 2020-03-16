@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import Head from "../components/Head";
+import { TwitterShareButton } from "react-twitter-embed";
 
 /**
           <input
@@ -17,7 +18,18 @@ const Sidebar = props => (
         I made
       </a>{" "}
       a crowdsourced list of resources to help tackle the coronavirus crisis.{" "}
-      <br />
+      <div className="mt-4 mb-4">
+        <TwitterShareButton
+          url="https://covidpages.com"
+          options={{
+            text:
+              "The COVID Pages: A crowdsourced directory of resources to help ease the crisis 🌎",
+            via: "covidpages",
+            size: "large"
+          }}
+          placeholder="Loading"
+        />
+      </div>
       <span className="text-gray-500">
         <hr className="mb-2 mt-2" />
         <small>
