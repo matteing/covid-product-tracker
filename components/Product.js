@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+const URL = require("url");
 
 function getUrlHostname(url) {
   try {
