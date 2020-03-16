@@ -7,6 +7,5 @@ module.exports = async (req, res) => {
         req.query.id,
         req.query.offset ? req.query.offset : null
       )
-    )
-    .end();
+    );
 };
