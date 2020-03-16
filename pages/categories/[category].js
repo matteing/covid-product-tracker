@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getCategoryForId } from "../../lib";
+import { getCategoryForId } from "../../lib/utils";
 import AppLayout from "../../layouts/AppLayout";
 import Product from "../../components/Product";
 import axios from "../../lib/axios";
