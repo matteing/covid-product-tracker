@@ -21,7 +21,7 @@ html {
 
 body {
   @apply min-h-screen bg-yellow-100;
-  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  background-image: url("https://www.transparenttextures.com/patterns/sandpaper.png");
 }
 
 h1 {
