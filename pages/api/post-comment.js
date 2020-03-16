@@ -12,7 +12,7 @@ export default async (req, res) => {
         req.body.content
       );
       console.log(data);
-      res.status(201).json(data);
+      return res.status(201).json(data);
       break;
     default:
       res.status(405).end(); //Method Not Allowe d

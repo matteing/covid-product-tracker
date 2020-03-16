@@ -1,6 +1,6 @@
 import { getForCategory } from "../../lib";
 module.exports = async (req, res) => {
-  res
+  return res
     .status(200)
     .json(
       await getForCategory(
