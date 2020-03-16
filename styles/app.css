@@ -18,11 +18,12 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-white;
+  @apply min-h-screen bg-yellow-100;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
 }
 
 h1 {
-  @apply text-2xl font-bold;
+  @apply text-3xl font-bold;
 }
 
 h2 {
@@ -33,7 +34,7 @@ h3 {
   @apply text-lg;
 }
 
-a {
+a:not(.btn):not(.unstyled) {
   @apply text-primary underline cursor-pointer !important;
 }
 
@@ -65,11 +66,11 @@ footer svg path {
   @apply stroke-current fill-current !important;
 }
 
-input {
+.input {
   @apply bg-white border border-gray-300 rounded py-2 px-4 block w-full appearance-none leading-normal;
 }
 
-input:focus {
+.input:focus {
   @apply outline-none shadow-outline;
 }
 
