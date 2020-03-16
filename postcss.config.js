@@ -4,10 +4,10 @@ const purgecss = [
   {
     // Specify the paths to all of the template files in your project
     content: [
-      "./src/**/*.html",
-      "./src/**/*.vue",
-      "./src/**/*.jsx",
-      "./src/**/*.js"
+      "./**/*.html",
+      "./**/*.vue",
+      "./**/*.jsx",
+      "./**/*.js"
       // etc.
     ],
 
