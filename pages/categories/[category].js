@@ -59,6 +59,7 @@ export default class CategoryPage extends Component {
 
   render() {
     const category = getCategoryForId(this.props.category);
+    if (!category) return <div>Not found.</div>;
     return (
       <AppLayout>
         <Head title={category.name} />

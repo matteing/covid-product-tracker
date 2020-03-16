@@ -9,6 +9,66 @@ import Head from "../components/Head";
             placeholder="Find a product..."
           /> */
 
+const Sidebar = props => (
+  <>
+    <h3 className="mb-4 font-bold">What's this?</h3>
+    <div className="p-4 rounded-md bg-white border border-gray-400 mb-4">
+      <a target="_blank" href="https://twitter.com/matteing">
+        I made
+      </a>{" "}
+      a crowdsourced list of resources to help tackle the coronavirus crisis.{" "}
+      <br />
+      <span className="text-gray-500">
+        <hr className="mb-2 mt-2" />
+        <small>
+          Brought to you by{" "}
+          <a target="_blank" href="https://getmakerlog.com">
+            Makerlog
+          </a>
+          , the home of the maker community. Oh, and this is{" "}
+          <a
+            target="_blank"
+            href="https://github.com/matteing/covid-product-tracker"
+          >
+            open source
+          </a>
+          !
+        </small>
+      </span>
+    </div>
+    <h3 className="mb-4 font-bold">Categories</h3>
+    <ul>
+      <Link href="/categories/remote-work">
+        <li className="cursor-pointer p-3 bg-white border border-b-0 border-gray-400 hover:bg-yellow-500">
+          <a class="unstyled">Working from home 💻</a>
+        </li>
+      </Link>
+
+      <Link href="/categories/education-resources">
+        <li className="cursor-pointer p-3 bg-white border border-b-0 border-gray-400 hover:bg-yellow-500">
+          <a class="unstyled">Education & resources 📝</a>
+        </li>
+      </Link>
+      <Link href="/categories/physical-services">
+        <li className="cursor-pointer p-3 bg-white border border-b-0 border-gray-400 hover:bg-yellow-500">
+          <a class="unstyled">Physical services 🩺</a>
+        </li>
+      </Link>
+
+      <Link href="/categories/indie-apps">
+        <li className="cursor-pointer p-3 bg-white border border-b-0 border-gray-400 hover:bg-yellow-500">
+          <a class="unstyled">Indie-made products ✅</a>
+        </li>
+      </Link>
+      <Link href="/categories/on-makerlog">
+        <li className="cursor-pointer p-3 bg-white border border-gray-400 hover:bg-yellow-500">
+          <a class="unstyled">Built in public 🔥</a>
+        </li>
+      </Link>
+    </ul>
+  </>
+);
+
 export default class AppLayout extends Component {
   render() {
     return (
@@ -40,41 +100,12 @@ export default class AppLayout extends Component {
               </a>
             </div>
             <div className="md:grid md:grid-cols-3  bg-gray-100  flex-grow border border-gray-400 border-t-0 border-b-0">
+              <div className="block md:hidden p-4  pt-6">
+                <Sidebar />
+              </div>
               <div className="col-span-2 p-4 pt-6">{this.props.children}</div>
-              <div className="p-4  pt-6">
-                <h3 className="mb-2 font-bold">Categories</h3>
-                <ul>
-                  <li className="cursor-pointer p-2 border border-gray-400 border-t-0 border-b-0 border-r-0">
-                    <Link href="/">
-                      <a>All categories ✨</a>
-                    </Link>
-                  </li>
-                  <li className="cursor-pointer p-2 border border-gray-400 border-t-0 border-b-0 border-r-0">
-                    <Link href="/categories/remote-work">
-                      <a>Working from home 💻</a>
-                    </Link>
-                  </li>
-                  <li className="cursor-pointer p-2 border border-gray-400 border-t-0 border-b-0 border-r-0">
-                    <Link href="/categories/education">
-                      <a>Education & resources 📝</a>
-                    </Link>
-                  </li>
-                  <li className="cursor-pointer p-2 border border-gray-400 border-t-0 border-b-0 border-r-0">
-                    <Link href="/categories/services-irl">
-                      <a>Physical services 🩺</a>
-                    </Link>
-                  </li>
-                  <li className="cursor-pointer p-2 border border-gray-400 border-t-0 border-b-0 border-r-0">
-                    <Link href="/categories/education">
-                      <a>Indie-made products ✅</a>
-                    </Link>
-                  </li>
-                  <li className="cursor-pointer p-2 border border-gray-400 border-t-0 border-b-0 border-r-0">
-                    <Link href="/categories/publicly-built">
-                      <a>Built in public 🔥</a>
-                    </Link>
-                  </li>
-                </ul>
+              <div className="md:block hidden p-4  pt-6">
+                <Sidebar />
               </div>
             </div>
             <div className="bg-white items-center justify-center text-gray-600 p-4 border border-gray-400 border-b-0 flex">

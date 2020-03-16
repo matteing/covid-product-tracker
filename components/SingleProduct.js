@@ -65,28 +65,31 @@ const SingleProduct = ({ product }) => {
     <>
       <div className="bg-white border border-gray-400 rounded-md rounded-b-none p-4 ">
         <a className="unstyled" target="_blank" href={product.url}>
-          <div className="flex items-center justify-center cursor-pointer">
-            <div className="mr-4">
-              <img
-                className="w-12 h-12"
-                src={product.icon}
-                alt={product.name}
-              />
-            </div>
-            <div className="flex-grow">
-              <h2 className="font-bold">{product.name}</h2>
-              <h3 className="subtitle text-gray-700">{product.description}</h3>
-              <small className="text-gray-600">
-                {product.cost} · {product.comments.length} comments ·{" "}
-                {product.url}
-              </small>
-              <br />
+          <div className="flex  md:flex-row flex-col items-left md:items-center justify-center cursor-pointer">
+            <div className="flex-grow flex">
+              <div className="mr-4">
+                <img
+                  className="hidden md:block w-12 h-12"
+                  src={product.icon}
+                  alt={product.name}
+                />
+              </div>
+              <div className="flex-grow">
+                <h2 className="font-bold">{product.name}</h2>
+                <h3 className="subtitle text-gray-700">
+                  {product.description}
+                </h3>
+                <small className="text-gray-600">
+                  {product.cost} · {product.comments.length} comments ·{" "}
+                  {product.url}
+                </small>
+              </div>
             </div>
 
             <a
               href={product.url}
               target="_blank"
-              className="btn bg-primary text-white inline-block font-base text-md rounded-full block p-2 pl-5 pr-5"
+              className="mt-2 md:mt-0 btn bg-primary text-white text-center inline-block font-base text-md rounded-full block p-2 pl-5 pr-5"
             >
               Get product
             </a>
