@@ -15,7 +15,7 @@ export default async (req, res) => {
       res.status(201).json(data);
       break;
     default:
-      res.status(405).end(); //Method Not Allowed
+      res.status(405).end(); //Method Not Allowe d
       break;
   }
 };
