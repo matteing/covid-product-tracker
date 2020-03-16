@@ -21,7 +21,7 @@ function getLocation(href) {
 
 function getUrlHostname(url) {
   try {
-    return getLocation(product.url).hostname;
+    return getLocation(url).hostname;
   } catch (e) {
     console.log(e);
     return url;
