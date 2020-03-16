@@ -6,6 +6,7 @@ export default async (req, res) => {
       req.query.id,
       req.query.offset ? req.query.offset : null
     );
+    console.log(products);
     return res.status(200).json(products);
   } catch (e) {
     console.log(e);
