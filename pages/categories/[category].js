@@ -4,6 +4,7 @@ import AppLayout from "../../layouts/AppLayout";
 import Product from "../../components/Product";
 import axios from "../../lib/axios";
 import Link from "next/link";
+import Head from "../../components/Head";
 
 export default class CategoryPage extends Component {
   static async getInitialProps({ query }) {
@@ -60,6 +61,7 @@ export default class CategoryPage extends Component {
     const category = getCategoryForId(this.props.category);
     return (
       <AppLayout>
+        <Head title={category.name} />
         <Link href="/">
           <a>← Back to all</a>
         </Link>

@@ -3,6 +3,7 @@ import AppLayout from "../../layouts/AppLayout";
 import SingleProduct from "../../components/SingleProduct";
 import Link from "next/link";
 import Axios from "../../lib/axios";
+import Head from "../../components/Head";
 
 export default class ProductPage extends Component {
   static async getInitialProps({ query }) {
@@ -24,8 +25,10 @@ export default class ProductPage extends Component {
 
   render() {
     const { product } = this.props;
+    if (!product) return <div>Not found.</div>;
     return (
       <AppLayout>
+        <Head title={product.name} />
         <Link href="/">
           <a>← Back to all</a>
         </Link>

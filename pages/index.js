@@ -1,12 +1,13 @@
-import Head from "next/head";
 import AppLayout from "../layouts/AppLayout";
 import Product from "../components/Product";
 import axios from "../lib/axios";
 import Link from "next/link";
+import Head from "../components/Head";
 
 const Home = ({ categories = null }) => {
   return (
     <AppLayout>
+      <Head title="Home" />
       {categories &&
         categories
           .filter(c => c.products.length > 0)
