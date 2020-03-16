@@ -1,7 +1,7 @@
 import { createComment } from "../../lib";
 
 export default async (req, res) => {
-  res.setHeader("Cache-Control", "s-maxage=1800");
+  res.setHeader("Cache-Control", "s-maxage=1800, stale-while-revalidate");
   switch (req.method) {
     case "GET":
       //...
