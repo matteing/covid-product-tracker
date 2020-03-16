@@ -77,7 +77,7 @@ export default class CategoryPage extends Component {
         {this.state.products.length === 0 && (
           <span className="text-gray-900">
             No products yet.{" "}
-            <a href="https://airtable.com/shrzOOpGbYwE6vxqP">Add one?</a>
+            <a href="https://airtable.com/shrPtF3izWbVfwWAW">Add one?</a>
           </span>
         )}
         <div className="mt-2">

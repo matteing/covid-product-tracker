@@ -28,7 +28,7 @@ export default class AppLayout extends Component {
                 </h1>
               </Link>
               <h3 className="subtitle mb-4">
-                A directory of tech products aiming to help solve the global
+                A directory of resources aiming to help solve the global
                 pandemic, aggregated by people like you.
               </h3>
               <a

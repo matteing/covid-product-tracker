@@ -1,5 +1,6 @@
 import { getForCategory } from "../../lib";
 export default async (req, res) => {
+  res.setHeader("Cache-Control", "s-maxage=1800");
   const products = await getForCategory(
     req.query.id,
     req.query.offset ? req.query.offset : null
