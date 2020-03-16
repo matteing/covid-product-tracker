@@ -12,7 +12,10 @@ export default async (req, res) => {
         req.body.content
       );
       console.log(data);
-      res.status(201).json(data);
+      res
+        .status(201)
+        .json(data)
+        .end();
       break;
     default:
       res.status(405).end(); //Method Not Allowed
