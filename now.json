@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "BASE_URL": "@base_url",
+      "AIRTABLE_API_KEY": "@airtable_api_key"
+    }
+  }
+}
