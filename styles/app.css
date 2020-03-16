@@ -182,3 +182,7 @@ footer svg path {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
+
+.bmc-inline {
+  height: 30px !important;
+}

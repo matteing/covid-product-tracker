@@ -66,6 +66,21 @@ const Sidebar = props => (
         </li>
       </Link>
     </ul>
+    <h3 className="mt-4 mb-4 font-bold">More</h3>
+    <div className="p-4 rounded-md bg-white border border-gray-400 mb-4">
+      <div className="flex flex-col items-center justify-center">
+        <span className="mb-2">
+          Like what I made? Consider buying me a coffee:
+        </span>
+        <a href="https://www.buymeacoffee.com/mattei" target="_blank">
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/lato-yellow.png"
+            alt="Buy Me A Coffee"
+            className="bmc-inline"
+          />
+        </a>
+      </div>
+    </div>
   </>
 );
 
